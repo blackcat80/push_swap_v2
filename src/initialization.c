@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   initialization.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:24 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:40:35 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:24:49 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* fill_stack_values:
-*	Fills stack_a with the provided values.
-*	If the values are out of integer range, prints and error and exits the program.
+	Rellena stack_a con los valores proporcionados.
+	Si los valores están fuera del rango de enteros, se imprime y se produce un error y se sale del programa.
 */
 t_stack	*fill_stack_values(int ac, char **av)
 {
@@ -40,13 +40,13 @@ t_stack	*fill_stack_values(int ac, char **av)
 }
 
 /* assign_index:
-*	Assigns an index to each value in stack a. This is a convenient way to order
-*	the stack because indexes can be checked and compared instead of actual values,
-*	which may or may not be adjacent to each other.
-*		ex. values:		-3	 0	 9	 2
-*		indexes:		[1]	[2]	[4]	[3]
-*	The indexes are assigned from highest (stack_size) to lowest (1).
-*/
+	Asigna un índice a cada valor en la pila a. Esta es una manera conveniente de ordenar
+	la pila porque los índices se pueden verificar y comparar en lugar de los valores reales,
+	que pueden o no estar adyacentes entre sí.
+	ex. valores: -3   0   9   2
+	índices:     [1] [2] [4] [3]
+Los índices se asignan desde el más alto (stack_size) hasta el más bajo (1).
+*/	
 void	assign_index(t_stack *stack_a, int stack_size)
 {
 	t_stack	*ptr;

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   input_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:05 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:43:13 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:13:03 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* arg_is_number:
-*   Checks if the argument is a number. +1 1 and -1 are all valid numbers.
-*   Return: 1 if the argument is a number, 0 if not.
+/*  arg_is_number:
+   Comprueba si el argumento es un número. +1 1 y -1 son todos números válidos.
+   Devuelve: 1 si el argumento es un número, 0 si no lo es.
 */
 static int	arg_is_number(char *av)
 {
@@ -31,8 +31,8 @@ static int	arg_is_number(char *av)
 }
 
 /* have_duplicates:
-*   Checks if the argument list has duplicate numbers.
-*   Return: 1 if a duplicate is found, 0 if there are none.
+   Comprueba si la lista de argumentos tiene números duplicados.
+   Devuelve: 1 si se encuentra un duplicado, 0 si no lo hay.
 */
 static int	have_duplicates(char **av)
 {
@@ -54,11 +54,9 @@ static int	have_duplicates(char **av)
 	return (0);
 }
 
-/* arg_is_zero:
-*   Checks the argument is a 0 to avoid 0 +0 -0 duplicates
-*	and 0 0000 +000 -00000000 too.
-*   Return: 1 if the argument is a zero, 0 if it contains
-*	anything else than a zero.
+/*  arg_is_zero:
+   Comprueba que el argumento es un 0 para evitar 0 +0 -0 duplicados y 0 0000 +000 -00000000 también.
+   Devuelve: 1 si el argumento es un cero, 0 si contiene cualquier cosa que no sea un cero.
 */
 static int	arg_is_zero(char *av)
 {
@@ -74,9 +72,9 @@ static int	arg_is_zero(char *av)
 	return (1);
 }
 
-/* is_correct_input:
-*   Checks if the given arguments are all numbers, without duplicates.
-*   Return: 1 if the arguments are valid, 0 if not.
+/*  is_correct_input:
+   Comprueba si los argumentos dados son todos números, sin duplicados.
+   Devuelve: 1 si los argumentos son válidos, 0 si no.
 */
 int	is_correct_input(char **av)
 {

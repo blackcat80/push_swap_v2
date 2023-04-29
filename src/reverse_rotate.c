@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:41:36 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:41:43 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:40:58 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* rev_rotate:
-*	Brings the bottom element of a stack to the top.
+	Lleva el elemento inferior de una pila a la parte superior.
 */
 static void	rev_rotate(t_stack **stack)
 {
@@ -30,8 +30,8 @@ static void	rev_rotate(t_stack **stack)
 }
 
 /* do_rra:
-*	Brings the bottom element of stack a to the top.
-*	Prints "rra" to the standard output.
+	Lleva el elemento inferior de la pila a a la parte superior.
+	Imprime "rra" en la salida estándar.
 */
 void	do_rra(t_stack **stack_a)
 {
@@ -40,8 +40,8 @@ void	do_rra(t_stack **stack_a)
 }
 
 /* do_rrb:
-*	Brings the bottom element of stack b to the top.
-*	Prints "rrb" to the standard output.
+	Lleva el elemento inferior de la pila b a la parte superior.
+	Imprime "rrb" en la salida estándar.
 */
 void	do_rrb(t_stack **stack_b)
 {
@@ -50,9 +50,9 @@ void	do_rrb(t_stack **stack_b)
 }
 
 /* do_rrr:
-*	Brings the bottom element of both stack a and stack be
-*	to the top of their respective stacks.
-*	Prints "rrr" to the standard output.
+	Trae el elemento inferior de la pila a y la pila b
+	a la parte superior de sus respectivas pilas.
+	Imprime "rrr" en la salida estándar.
 */
 void	do_rrr(t_stack **stack_a, t_stack **stack_b)
 {

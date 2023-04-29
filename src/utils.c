@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:42:31 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:42:39 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:55:45 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* free_stack:
-*	Frees each element in a given stack and sets the stack pointer to NULL.
+	Libera cada elemento en una pila determinada y establece el puntero de la pila en NULL.
 */
 void	free_stack(t_stack **stack)
 {
@@ -31,8 +31,8 @@ void	free_stack(t_stack **stack)
 }
 
 /* exit_error:
-*   Writes "Error\n" to the standard output after freeing stack a and b.
-*	Exits with standard error code 1.
+	Escribe "Error\n" en la salida estándar después de liberar las pilas a y b.
+	Sale con el código de error estándar 1.
 */
 void	exit_error(t_stack **stack_a, t_stack **stack_b)
 {
@@ -45,7 +45,7 @@ void	exit_error(t_stack **stack_a, t_stack **stack_b)
 }
 
 /* ft_atoi:
-*   Converts an alphanumeric string of characters into a long integer.
+   Convierte una cadena alfanumérica de caracteres en un entero largo.
 */
 long int	ft_atoi(const char *str)
 {
@@ -72,7 +72,7 @@ long int	ft_atoi(const char *str)
 }
 
 /* ft_putstr:
-*	Prints a given string of characters to the standard output.
+	Imprime una cadena dada de caracteres en la salida estándar.
 */
 void	ft_putstr(char *str)
 {
@@ -87,9 +87,9 @@ void	ft_putstr(char *str)
 }
 
 /* nb_abs:
-*	Returns the absolute value of a given number.
-*	The absolute value of a number is used to measure the distance of that
-*	number from 0, whether it is positive or negative (abs value of -6 is 6).
+	Devuelve el valor absoluto de un número dado.
+	El valor absoluto de un número se usa para medir la distancia de ese
+	número desde 0, ya sea positivo o negativo (el valor absoluto de -6 es 6).
 */
 int	nb_abs(int nb)
 {

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 20:01:03 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:28:33 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* is_sorted:
-*	Checks if a stack is sorted.
-*	Returns 0 if the stack is not sorted, 1 if it is sorted.
+	Comprueba si una pila está ordenada.
+	Devuelve 0 si la pila no está ordenada, 1 si lo está.
 */
 int	is_sorted(t_stack *stack)
 {
@@ -28,8 +28,8 @@ int	is_sorted(t_stack *stack)
 }
 
 /* push_swap:
-*	Chooses a sorting method depending on the number
-*	of values to be sorted.
+	Elige un método de clasificación dependiendo del número
+	de valores a ordenar.
 */
 static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 {
@@ -42,9 +42,9 @@ static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 }
 
 /* main:
-*	Checks if the input is correct, in which case it initializes stacks a and b,
-*	assigns each value indexes and sorts the stacks. When sorting is done, frees
-*	the stacks and exits.
+	Comprueba si la entrada es correcta, en cuyo caso inicializa las pilas a y b,
+	asigna cada índice de valor y ordena las pilas. Cuando se realiza la clasificación, libera
+	las pilas y salidas.
 */
 int	main(int ac, char **av)
 {

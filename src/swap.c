@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:44:47 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:57:59 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:54:13 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* swap:
-*	Swaps the top 2 elements of a stack.
-*	Does nothing if there is only one or no elements.
+	Intercambia los 2 elementos superiores de una pila.
+	No hace nada si solo hay uno o ningún elemento.
 */
 static void	swap(t_stack *stack)
 {
@@ -31,8 +31,8 @@ static void	swap(t_stack *stack)
 }
 
 /* do_sa:
-*	Swaps the top 2 elements of stack a.
-*	Prints "sa" to the standard output.
+	Intercambia los 2 elementos superiores de la pila a.
+	Imprime "sa" en la salida estándar.
 */
 void	do_sa(t_stack **stack_a)
 {
@@ -41,8 +41,8 @@ void	do_sa(t_stack **stack_a)
 }
 
 /* do_sb:
-*	Swaps the top 2 elements of stack b.
-*	Prints "sb" to the standard output.
+	Intercambia los 2 elementos superiores de la pila b.
+	Imprime "sb" en la salida estándar.
 */
 void	do_sb(t_stack **stack_b)
 {
@@ -51,9 +51,8 @@ void	do_sb(t_stack **stack_b)
 }
 
 /* do_ss:
-*	Swaps the top 2 elements of stack a and the top 2 elements
-*	of stack b.
-*	Prints "ss" to the standard output.
+	Intercambia los 2 elementos superiores de la pila a y los 2 elementos superiores
+	de pila b. Imprime "ss" en la salida estándar.
 */
 void	do_ss(t_stack **stack_a, t_stack **stack_b)
 {

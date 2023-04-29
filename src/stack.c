@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:42:13 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:42:23 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:52:51 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* get_stack_bottom:
-*	Returns the last element of the stack.
+	Devuelve el último elemento de la pila.
 */
 t_stack	*get_stack_bottom(t_stack *stack)
 {
@@ -23,7 +23,7 @@ t_stack	*get_stack_bottom(t_stack *stack)
 }
 
 /* get_stack_before_bottom:
-*	Returns the second to last element of the stack.
+	Devuelve el penúltimo elemento de la pila.
 */
 t_stack	*get_stack_before_bottom(t_stack *stack)
 {
@@ -33,8 +33,8 @@ t_stack	*get_stack_before_bottom(t_stack *stack)
 }
 
 /* stack_new:
-*	Creates a stack elements with the provided value.
-*	Returns the newly created stack element.
+	Crea una pila de elementos con el valor proporcionado.
+	Devuelve el elemento de pila recién creado.
 */
 t_stack	*stack_new(int value)
 {
@@ -54,7 +54,7 @@ t_stack	*stack_new(int value)
 }
 
 /* add_stack_bottom:
-*	Adds an element to the bottom of a stack.
+	Agrega un elemento al final de una pila.
 */
 void	stack_add_bottom(t_stack **stack, t_stack *new)
 {
@@ -72,7 +72,7 @@ void	stack_add_bottom(t_stack **stack, t_stack *new)
 }
 
 /* get_stack_size:
-*	Returns the number of elements in a stack.
+	Devuelve el número de elementos en una pila.
 */
 int	get_stack_size(t_stack	*stack)
 {

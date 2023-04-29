@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   input_check_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:54 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:41:04 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:26:50 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* is_digit:
-*   Checks if the character is a digit.
-*   Return: 1 if the character is a digit, 0 if not.
+/*  is_digit:
+	Comprueba si el carácter es un dígito.
+    Devuelve: 1 si el carácter es un dígito, 0 si no lo es.
 */
 int	is_digit(char c)
 {
@@ -22,8 +22,8 @@ int	is_digit(char c)
 }
 
 /* is_sign:
-*   Checks if the character is number sign, + or -.
-*   Return: 1 if the character is a sign, 0 if not.
+   Comprueba si el carácter es un signo de número, + o -.
+   Devuelve: 1 si el carácter es un signo, 0 si no.
 */
 int	is_sign(char c)
 {
@@ -31,11 +31,11 @@ int	is_sign(char c)
 }
 
 /* nbstr_cmp:
-*   Compares two strings of digits to check if they are the same or not.
-*   If one of the strings starts with a '+' sign, it is ignored and the rest
-*   of the number string is checked.
-*   This is so that +123 == 123 but -123 != 123.
-*   Return: 0 if the strings match, another value if they do not.
+   Compara dos cadenas de dígitos para comprobar si son iguales o no.
+   Si una de las cadenas comienza con un signo '+', se ignora y el resto
+   de la cadena de números está marcada.
+   Esto es así que +123 == 123 pero -123 != 123.
+   Devuelve: 0 si las cadenas coinciden, otro valor si no lo hacen.
 */
 int	nbstr_cmp(const char *s1, const char *s2)
 {

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:58 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:44:06 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:39:07 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* push:
-*	Pushes the top element of src stack to the top of dest stack.
+	Empuja el elemento superior de la pila src a la parte superior de la pila de destino.
 */
 static void	push(t_stack **src, t_stack **dest)
 {
@@ -28,8 +28,8 @@ static void	push(t_stack **src, t_stack **dest)
 }
 
 /* do_pa:
-*	Pushes the top element of stack b to the top of stack a.
-*	Prints "pa" to the standard output.
+	Empuja el elemento superior de la pila b a la parte superior de la pila a.
+	Imprime "pa" en la salida estándar.
 */
 void	do_pa(t_stack **stack_a, t_stack **stack_b)
 {
@@ -38,8 +38,8 @@ void	do_pa(t_stack **stack_a, t_stack **stack_b)
 }
 
 /* do_pb:
-*	Pushes the top element of stack a to the top of stack b.
-*	Prints "pb" to the standard output.
+	Empuja el elemento superior de la pila a a la parte superior de la pila b.
+	Imprime "pb" en la salida estándar.
 */
 void	do_pb(t_stack **stack_a, t_stack **stack_b)
 {
