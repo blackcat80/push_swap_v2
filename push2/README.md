@@ -1,7 +1,8 @@
 # push_swap
 
 <p align="center">
-  <img src="file:///Users/csitja-b/Desktop/push2/push_swap.png/>
+  <img src="file:///Users/cs<img width="815" alt="push_swap" src="https://user-images.githubusercontent.com/101610337/235307934-fdb9e587-0d84-4a47-84df-b2fe9b3ea72a.png">
+itja-b/Desktop/push2/push_swap.png/>
 </p>
 
 push_swap is a 42 school algorithm project where we must sort a given list of random numbers with a limited set of instructions, using the lowest possible number of actions.
@@ -73,5 +74,4 @@ The grade depends on how efficient the program's sorting process is.
 
 Validating the project requires at least 80/100.
 
----
-Made by mcombeau: mcombeau@student.42.fr | LinkedIn: [mcombeau](https://www.linkedin.com/in/mia-combeau-86653420b/) | Website: [codequoi.com](https://www.codequoi.com)
+
