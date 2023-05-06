@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:28:33 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:31:34 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 }
 
 /* main:
-	Comprueba si la entrada es correcta, en cuyo caso inicializa las pilas a y b,
-	asigna cada índice de valor y ordena las pilas. Cuando se realiza la clasificación, libera
+	Comprueba si la entrada es correcta, en cuyo caso 
+	inicializa las pilas a y b,	asigna cada índice de valor y 
+	ordena las pilas. Cuando se realiza la clasificación, libera
 	las pilas y salidas.
 */
 int	main(int ac, char **av)
@@ -54,7 +55,7 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-	if (!is_correct_input(av))
+	if (!is_correct_input(av, ac))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
 	stack_a = fill_stack_values(ac, av);

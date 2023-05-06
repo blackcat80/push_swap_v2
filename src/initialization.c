@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:24 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:24:49 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:30:14 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /* fill_stack_values:
 	Rellena stack_a con los valores proporcionados.
-	Si los valores están fuera del rango de enteros, se imprime y se produce un error y se sale del programa.
+	Si los valores están fuera del rango de enteros, se imprime 
+	y se produce un error y se sale del programa.
 */
 t_stack	*fill_stack_values(int ac, char **av)
 {
@@ -40,9 +41,9 @@ t_stack	*fill_stack_values(int ac, char **av)
 }
 
 /* assign_index:
-	Asigna un índice a cada valor en la pila a. Esta es una manera conveniente de ordenar
-	la pila porque los índices se pueden verificar y comparar en lugar de los valores reales,
-	que pueden o no estar adyacentes entre sí.
+	Asigna un índice a cada valor en la pila a. Esta es una manera conveniente 
+	de ordenar la pila porque los índices se pueden verificar y comparar 
+	en lugar de los valores reales,	que pueden o no estar adyacentes entre sí.
 	ex. valores: -3   0   9   2
 	índices:     [1] [2] [4] [3]
 Los índices se asignan desde el más alto (stack_size) hasta el más bajo (1).

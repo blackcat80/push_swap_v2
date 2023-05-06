@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42barcel>       +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/28 19:45:26 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 20:54:13 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void		exit_error(t_stack **stack_a, t_stack **stack_b);
 
 /* Input Check */
 
-int			is_correct_input(char **av);
+int			is_correct_input(char **av, int ac);
 int			is_digit(char c);
 int			is_sign(char c);
 int			nbstr_cmp(const char *s1, const char *s2);

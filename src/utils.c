@@ -6,14 +6,15 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:42:31 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:55:45 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:35:55 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* free_stack:
-	Libera cada elemento en una pila determinada y establece el puntero de la pila en NULL.
+	Libera cada elemento en una pila determinada y establece 
+	el puntero de la pila en NULL.
 */
 void	free_stack(t_stack **stack)
 {

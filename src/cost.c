@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:02 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:15:48 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:27:00 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 	Calcula el costo de mover cada elemento de la pila B al lugar correcto
 	posición en la pila A.
 	Se calculan dos costes:
-	cost_b representa el costo de llevar el elemento a la parte superior de la pila B
+	cost_b representa el costo de llevar el elemento a la parte superior de la 
+	pila B
 	cost_a representa el costo de llegar a la posición correcta en la pila A.
 	Si el elemento está en la mitad inferior de la pila, el costo será negativo,
 	si está en la mitad superior, el costo es positivo.

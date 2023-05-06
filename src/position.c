@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:41:15 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:37:46 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:32:35 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@
 	posición: <0> <1> <2> <3>
 	Esto se usa para calcular el costo de mover un cierto número a
 	una determinada posición. Si el ejemplo anterior es la pila b, costaría
-	nada (0) para empujar el primer elemento para apilar a. Sin embargo si queremos
-	empujar el valor más alto, 9, que está en la tercera posición, costaría 2 movimientos extra
-	para llevar ese 9 a la parte superior de b antes de pushearlo al stack a.
+	nada (0) para empujar el primer elemento para apilar a. Sin embargo si 
+	queremos empujar el valor más alto, 9, que está en la tercera posición, 
+	costaría 2 movimientos extra para llevar ese 9 a la parte 
+	superior de b antes de pushearlo al stack a.
 */
 static void	get_position(t_stack **stack)
 {

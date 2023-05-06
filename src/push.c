@@ -6,14 +6,15 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:58 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:39:07 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:33:27 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /* push:
-	Empuja el elemento superior de la pila src a la parte superior de la pila de destino.
+	Empuja el elemento superior de la pila src a la parte 
+	superior de la pila de destino.
 */
 static void	push(t_stack **src, t_stack **dest)
 {

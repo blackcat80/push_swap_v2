@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:44:33 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/04/29 17:45:01 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 21:35:22 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static int	find_highest_index(t_stack *stack)
 }
 
 /* tiny_sort:
-	Ordena una pila de 3 números en 2 o menos movimientos. La clasificación se realiza por índice.
-	en lugar de valor. 
+	Ordena una pila de 3 números en 2 o menos movimientos. 
+	La clasificación se realiza por índice en lugar de valor. 
 	Ejemplo:
 		valores:  0   9   2 
 		índices: [1] [3] [2]
