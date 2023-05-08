@@ -1,6 +1,11 @@
 # push_swap
 
 <p align="center">
+  <img src="file:///Users/cs<img width="815" alt="push_swap" src="https://github.com/blackcat80/push_swap_v2/blob/main/push_swap.png">
+itja-b/Desktop/push2/push_swap.png/>
+</p>
+
+<p align="center">
   <img src="file:///Users/cs<img width="815" alt="push_swap" src="https://user-images.githubusercontent.com/101610337/235307934-fdb9e587-0d84-4a47-84df-b2fe9b3ea72a.png">
 itja-b/Desktop/push2/push_swap.png/>
 </p>
