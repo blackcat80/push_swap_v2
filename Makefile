@@ -5,6 +5,7 @@ HEADER      = push_swap.h
 INCLUDE     = -I ./includes/
 SRC_DIR     = src/
 OBJ_DIR     = ./obj/
+NAME_BONUS  = checker 
 
 # ============================= COMPILATE RULES =============================== #
 
@@ -22,6 +23,14 @@ SRC         = main.c \
                 position.c cost.c do_move.c \
                 utils.c
 SRCS = $(addprefix $(SRC_DIR), $(SRC))
+
+BONUS_SRC	= checker_bonus.c \
+				get_next_line_bonus.c get_next_line_utils_bonus.c \
+				initialization_bonus.c \
+				input_check_bonus.c input_check_utils_bonus.c \
+				push_bonus.c reverse_rotate_bonus.c \
+				rotate_bonus.c swap_bonus.c \
+				stack_bonus.c utils_bonus.c
 
 # =========================== DIRECTORIES ==================================== #
 
