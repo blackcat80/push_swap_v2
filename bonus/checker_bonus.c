@@ -6,10 +6,11 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 19:09:48 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/05/23 19:13:17 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/05/30 19:07:30 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/push_swap_bonus.h"
 
 /* Archivo pdte de terminar solo uso de ejemplo para adaptar la idea al proyecto */
 
