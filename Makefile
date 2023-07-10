@@ -1,11 +1,11 @@
 # =============================== NAMES ====================================== #
 
-NAME			= push_swap
-NAME_BONUS		= checker 
-INCLUDE			= -I ./includes/
-SRC_DIR			= src/
-BONUS_SRC_DIR	= bonus/
-OBJ_DIR			= obj/
+NAME            = push_swap
+NAME_BONUS      = checker 
+INCLUDE         = -I ./includes/
+SRC_DIR         = src/
+BONUS_SRC_DIR   = bonus/
+OBJ_DIR         = obj/
 
 # ============================= COMPILATE RULES =============================== #
 
