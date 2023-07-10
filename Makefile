@@ -1,11 +1,11 @@
 # =============================== NAMES ====================================== #
 
-NAME        = push_swap
-HEADER      = push_swap.h
-INCLUDE     = -I ./includes/
-SRC_DIR     = src/
-OBJ_DIR     = ./obj/
-NAME_BONUS  = checker 
+NAME			= push_swap
+NAME_BONUS		= checker 
+INCLUDE			= -I ./includes/
+SRC_DIR			= src/
+BONUS_SRC_DIR	= bonus/
+OBJ_DIR			= obj/
 
 # ============================= COMPILATE RULES =============================== #
 
@@ -32,9 +32,12 @@ BONUS_SRC	= checker_bonus.c \
 				rotate_bonus.c swap_bonus.c \
 				stack_bonus.c utils_bonus.c
 
+BONUS = $(addprefix $(BONUS_SRC_DIR), $(BONUS_SRC))
+
 # =========================== DIRECTORIES ==================================== #
 
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
+OBJ_BONUS = $(addprefix $(OBJ_DIR), $(BONUS:.c=.o))
 
 # =========================== BOLD COLORS ==================================== #
 
@@ -54,27 +57,30 @@ BG_Black    =\033[40m
 
 # ========================== MAKE RULES ===================================== #
 
-all: $(NAME)
-	@echo "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== $(DEF_COLOR)$(BG_Black)\n"
+$(OBJ_DIR)%.o: %.c
+	@mkdir -p $(dir $@)
+	@printf "$(YELLOW)\r $@$(DEF_COLOR)"
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
+all: $(NAME)
+	
 $(NAME): $(OBJS)
+	@echo "\n\n$(BG_Purple)$(GREEN)==== Project push_swap compiled! ==== $(DEF_COLOR)$(BG_Black)\n"
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
+bonus: $(OBJ_BONUS)	
+	@echo "\n\n$(BG_Purple)$(GREEN)==== Bonus push_swap compiled! ==== $(DEF_COLOR)$(BG_Black)\n"
+	@$(CC) $(CFLAGS) $(OBJ_BONUS) -o $(NAME_BONUS)
 
 clean:
 	@$(RM) $(OBJ_DIR)
 	@echo "\n$(CYAN)==== push_swap and objects files cleaned! ==== $(DEF_COLOR)\n"
 
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) $(NAME_BONUS)
 	@echo "\n$(CYAN)==== push_swap executable file and name cleaned! ==== $(DEF_COLOR)\n"
 
 re: fclean all
 	@echo "\n$(GREEN)==== Cleaned and rebuilt everything for push_swap! ==== $(DEF_COLOR)\n"
 
-$(OBJ_DIR)%.o: %.c Makefile
-	@mkdir -p $(dir $@)
-	@printf "$(YELLOW)\r $@$(DEF_COLOR)"
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 19:09:48 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/10 17:59:53 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/10 21:30:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@
 	-si esta mal ko 
 */
 
-int	main(int arc, char **args)
+int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	int		stack_size;
 
-	if (arc < 2)
+	if (ac < 2)
 		return (0);
-	if (!is_correct_input(args, arc))
+	if (!is_correct_input(av, ac))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
-	stack_a = fill_stack_values(arc, args);
+	stack_a = fill_stack_values(ac, av);
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);
 	

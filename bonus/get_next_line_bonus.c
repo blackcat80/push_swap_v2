@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:27:14 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/10 17:53:23 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/11 01:09:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ char	*get_next_line(int fd)
 	buffer = ft_cutline(buffer);
 	return (line);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	int		fd;
@@ -144,4 +144,4 @@ int	main(int argc, char **argv)
 	}
 	close(fd);
 	return (0);
-}
+}*/
