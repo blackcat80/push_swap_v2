@@ -6,11 +6,11 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:40:24 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/05/23 17:38:09 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:14:57 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap_bonus.h"
+#include "../includes/push_swap.h"
 
 /* fill_stack_values:
 	Rellena stack_a con los valores proporcionados.

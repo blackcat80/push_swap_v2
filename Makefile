@@ -51,6 +51,7 @@ WHITE       = \033[1;97m
 # =========================== BACKGROUND COLORS ============================ #
 
 BG_Black    =\033[40m
+
 # ========================== MAKE RULES ===================================== #
 
 all: $(NAME)
@@ -58,6 +59,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
 
 clean:
 	@$(RM) $(OBJ_DIR)

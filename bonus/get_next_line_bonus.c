@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 11:39:12 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/05/23 17:38:12 by csitja-b         ###   ########.fr       */
+/*   Created: 2023/07/10 16:27:14 by csitja-b          #+#    #+#             */
+/*   Updated: 2023/07/10 17:53:23 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "../includes/push_swap_bonus.h"
+#include <stddef.h>
 
 char	*ft_cutline(char *bufferp)
 {
@@ -121,7 +124,7 @@ char	*get_next_line(int fd)
 	buffer = ft_cutline(buffer);
 	return (line);
 }
-/*
+
 int	main(int argc, char **argv)
 {
 	int		fd;
@@ -135,10 +138,10 @@ int	main(int argc, char **argv)
 	}
 	while (res)
 	{
-		res = get_next_line(fd);
+		res = get_next_line(0);
 		printf("line%d = %s",n,res);
 		n++;
 	}
 	close(fd);
 	return (0);
-}*/
+}

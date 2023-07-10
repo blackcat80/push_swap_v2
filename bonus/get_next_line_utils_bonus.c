@@ -6,11 +6,12 @@
 /*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:39:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/05/23 19:00:44 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:08:57 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_bonus.h"
+#include <stddef.h>
 
 char	*true_free(char **str)
 {
