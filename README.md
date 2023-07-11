@@ -2,7 +2,7 @@
 
 **push_swap** es un proyecto de algoritmo de la escuela 42 donde debemos ordenar una lista dada de números aleatorios con un conjunto limitado de instrucciones, utilizando el menor número posible de acciones.
 
-<span style="color:red">## Uso</span>
+## Uso
 1. Clona el repositorio con `Git` y navega hacia él con `cd`.
 2. Luego usa `make` para compilar.
 
