@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:27:14 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 01:09:50 by marvin           ###   ########.fr       */
+/*   Updated: 2023/07/11 18:20:08 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "../includes/push_swap_bonus.h"
-#include <stddef.h>
 
 char	*ft_cutline(char *bufferp)
 {

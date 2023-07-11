@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csitja-b <csitja-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:39:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/10 16:08:57 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:23:22 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap_bonus.h"
-#include <stddef.h>
 
 char	*true_free(char **str)
 {

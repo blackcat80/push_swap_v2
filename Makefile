@@ -10,7 +10,7 @@ OBJ_DIR         = obj/
 # ============================= COMPILATE RULES =============================== #
 
 RM          = rm -rf
-CFLAGS      = -Wall -Werror -Wextra #-fsanitize=address
+CFLAGS      = -Wall -Werror -Wextra 
 
 # =========================== SOURCES ======================================== #
 
