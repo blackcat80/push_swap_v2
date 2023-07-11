@@ -60,6 +60,6 @@ La calificación depende de la eficiencia del proceso de ordenación del program
 
 Validar el proyecto requiere al menos 80/100.
 
-
+Buena suerte! 😁
 
 
