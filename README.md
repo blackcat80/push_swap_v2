@@ -2,69 +2,66 @@
 
 ![Image text](https://github.com/blackcat80/push_swap_v2/blob/main/push_swap.png)
 
-push_swap is a 42 school algorithm project where we must sort a given list of random numbers with a limited set of instructions, using the lowest possible number of actions.
+**push_swap** es un proyecto de algoritmo de la escuela 42 donde debemos ordenar una lista dada de números aleatorios con un conjunto limitado de instrucciones, utilizando el menor número posible de acciones.
 
-## Usage
+## Uso
+1. Clona el repositorio con `Git` y navega hacia él con `cd`.
+2. Luego usa `make` para compilar.
 
-Git clone the repository and cd into it. Then use ```make``` to compile.
-
-Then run it with :
-
-```shell
-./push_swap <numbers>
+Luego ejecútalo con:
+```
+./push_swap <números>
 ```
 
-The numbers provided can be positive or negative integers. There must not be any duplicates. For example :
-
-```shell
+Los números proporcionados pueden ser enteros positivos o negativos. No debe haber duplicados. Por ejemplo:
+```
 ./push_swap 9 0 -217 2147483647 -2147483648
 ```
 
-If the arguments are valid, the program will output the most efficient list of actions to sort the list.
+Si los argumentos son válidos, el programa mostrará la lista de acciones más eficiente para ordenar la lista.
 
-The program can be checked with the provided checker, like this :
-
-```shell
+El programa puede ser verificado con el programa de comprobación proporcionado, de esta manera:
+```
 ARG="3 0 9 2 -1"; ./push_swap $ARG | ./checker $ARG
 ```
 
-You can also simply ```make test3```, ```make test5```, ```make test100``` or ```make test500``` to quickly test the program with that number of values to sort.
 
-## Push_Swap Rules and Grading
+## Reglas y calificación de Push_Swap
+El programa solo tiene permitido dos pilas para trabajar, pila A y pila B. Todos los números se agregan inicialmente a la pila A, y la pila B está vacía.
 
-The program is only allowed two stacks to work with, stack A and stack B. All the numbers are initially added to stack A, and B is empty.
+Las acciones posibles son:
 
-The possible actions are:
+- `pa` (push A): Toma el primer elemento en la parte superior de B y colócalo en la parte superior de A. No hace nada si B está vacía.
+- `pb` (push B): Toma el primer elemento en la parte superior de A y colócalo en la parte superior de B. No hace nada si A está vacía.
+- `sa` (swap A): Intercambia los primeros 2 elementos en la parte superior de la pila A. No hace nada si hay solo un elemento o ningún elemento.
+- `sb` (swap B): Intercambia los primeros 2 elementos en la parte superior de la pila B. No hace nada si hay solo un elemento o ningún elemento.
+- `ss`: `sa` y `sb` al mismo tiempo.
+- `ra` (rotate A): Desplaza todos los elementos de la pila A hacia arriba en 1 posición. El primer elemento se convierte en el último.
+- `rb` (rotate B): Desplaza todos los elementos de la pila B hacia arriba en 1 posición. El primer elemento se convierte en el último.
+- `rr`: `ra` y `rb` al mismo tiempo.
+- `rra` (reverse rotate A): Desplaza todos los elementos de la pila A hacia abajo en 1 posición. El último elemento se convierte en el primero.
+- `rrb` (reverse rotate B): Desplaza todos los elementos de la pila B hacia abajo en 1 posición. El último elemento se convierte en el primero.
+- `rrr`: `rra` y `rrb` al mismo tiempo.
 
-* ```pa``` (push A): Take the first element at the top of B and put it at the top of A. Do nothing if B is empty.
-* ```pb``` (push B): Take the first element at the top of A and put it at the top of B. Do nothing if A is empty.
-* ```sa``` (swap A): Swap the first 2 elements at the top of stack A. Do nothing if there is only one or no elements.
-* ```sb``` (swap B): Swap the first 2 elements at the top of stack B. Do nothing if there is only one or no elements.
-* ```ss```: ```sa``` and ```sb``` at the same time.
-* ```ra``` (rotate A): Shift all elements of stack A up by 1. The first element becomes the last one.
-* ```rb``` (rotate B): Shift all elements of stack B up by 1. The first element becomes the last one.
-* ```rr```: ```ra``` and ```rb``` at the same time.
-* ```rra``` (reverse rotate A): Shift all elements of stack A down by 1. The last element becomes the first one.
-* ```rrb``` (reverse rotate B): Shift all elements of stack b down by 1. The last element becomes the first one.
-* ```rrr``` : ```rra``` and ```rrb``` at the same time.
+La calificación depende de la eficiencia del proceso de ordenación del programa.
 
-The grade depends on how efficient the program's sorting process is.
- 
-* Sorting 3 values: no more than 3 actions.
-* Sorting 5 values: no more than 12 actions.
-* Sorting 100 values: rating from 1 to 5 points depending on the number of actions:
-  * 5 points for less than 700 actions
-  * 4 points for less than 900
-  * 3 points for less than 1100
-  * 2 points for less than 1300
-  * 1 point for less than 1500
-* Sorting 500 values: rating from 1 to 5 points depending on the number of actions:
-  * 5 points for less than 5500 actions
-  * 4 points for less than 7000
-  * 3 points for less than 8500
-  * 2 points for less than 10000
-  * 1 point for less than 11500
+- Ordenar 3 valores: no más de 3 acciones.
+- Ordenar 5 valores: no más de 12 acciones.
+- Ordenar 100 valores: calificación de 1 a 5 puntos según el número de acciones:
+  - 5 puntos para menos de 700 acciones.
+  - 4 puntos para menos de 900 acciones.
+  - 3 puntos para menos de 1100 acciones.
+  - 2 puntos para menos de 1300 acciones.
+  - 1 punto para menos de 1500 acciones.
+- Ordenar 500 valores: calificación de 1 a 5 puntos según el número de acciones:
+  - 5 puntos para menos de 5500 acciones.
+  - 4 puntos para menos de 7000 acciones.
+  - 3 puntos para menos de 8500 acciones.
+  - 2 puntos para menos de 10000 acciones.
+  - 1 punto para menos de 11500 acciones.
 
-Validating the project requires at least 80/100.
+Validar el proyecto requiere al menos 80/100.
+
+
 
 
