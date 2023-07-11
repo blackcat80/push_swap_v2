@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:05 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:15:43 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 00:01:42 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ static int	arg_is_number(char *av)
 		return (0);
 	return (1);
 }
+
+/*  have_duplicates::
+   Comprueba que no haya duplicados en la array hasta el int max -1
+   Devuelve: 1 si el número está duplicado, 0 si no encuentra ninguno.
+*/
 
 static int	have_duplicates(int *num, int tmp, int max)
 {
