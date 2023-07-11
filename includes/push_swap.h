@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:14:54 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/11 19:25:39 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdio.h>
+# include <fcntl.h>
 
 typedef struct s_stack
 {
