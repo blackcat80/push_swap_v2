@@ -1,5 +1,3 @@
-# push_swap
-
 ![Image text](https://github.com/blackcat80/push_swap_v2/blob/main/push_swap.png)
 
 **push_swap** es un proyecto de algoritmo de la escuela 42 donde debemos ordenar una lista dada de números aleatorios con un conjunto limitado de instrucciones, utilizando el menor número posible de acciones.
