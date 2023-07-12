@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 19:09:48 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/12 03:20:53 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 04:44:40 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,61 +33,61 @@ int ft_strcmp(const char *s1, const char *s2)
     return ((unsigned char)*s1 - (unsigned char)*s2);
 }
 
-int do_commands(const char *stack_size, t_stack **stack_a, t_stack **stack_b)
+int do_commands(char *line, t_stack **stack_a, t_stack **stack_b)
 {
-    if (!(ft_strcmp(stack_size, "sa")))
+    if (!(ft_strcmp(line, "sa")))
     {
         swap(*stack_a);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "sb")))
+    if (!(ft_strcmp(line, "sb")))
     {
         swap(*stack_b);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "ss")))
+    if (!(ft_strcmp(line, "ss")))
     {
         swap(*stack_a);
         swap(*stack_b);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "pa")))
+    if (!(ft_strcmp(line, "pa")))
     {
         push(stack_b, stack_a);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "pb")))
+    if (!(ft_strcmp(line, "pb")))
     {
         push(stack_a, stack_b);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "ra")))
+    if (!(ft_strcmp(line, "ra")))
     {
         rotate(stack_a);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "rb")))
+    if (!(ft_strcmp(line, "rb")))
     {
         rotate(stack_b);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "rr")))
+    if (!(ft_strcmp(line, "rr")))
     {
         rotate(stack_a);
         rotate(stack_b);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "rra")))
+    if (!(ft_strcmp(line, "rra")))
     {
         rev_rotate(stack_a);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "rrb")))
+    if (!(ft_strcmp(line, "rrb")))
     {
         rev_rotate(stack_b);
         return (0);
     }
-    if (!(ft_strcmp(stack_size, "rrr")))
+    if (!(ft_strcmp(line, "rrr")))
     {
         rev_rotate(stack_a);
         rev_rotate(stack_b);
@@ -137,9 +137,7 @@ int main(int ac, char **av)
         }
         free(line);
     }
-
     print_checker_res(stack_a, stack_b);
-
     free_stack(&stack_a);
     free_stack(&stack_b);
     return (0);
