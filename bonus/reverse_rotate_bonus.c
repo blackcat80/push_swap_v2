@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:41:36 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:13:45 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 01:32:45 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* rev_rotate:
 	Lleva el elemento inferior de una pila a la parte superior.
 */
-static void	rev_rotate(t_stack **stack)
+void	rev_rotate(t_stack **stack)
 {
 	t_stack	*tmp;
 	t_stack	*tail;

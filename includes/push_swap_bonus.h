@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 18:56:10 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:28:07 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 02:50:16 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,11 @@ void		do_rr(t_stack **stack_a, t_stack **stack_b);
 void		do_rrr(t_stack **stack_a, t_stack **stack_b);
 void		do_rra(t_stack **stack_a);
 void		do_rrb(t_stack **stack_b);
+void		push(t_stack **src, t_stack **dest);
+void	 	swap(t_stack *stack);
+void		rotate(t_stack **stack);
+void		rev_rotate(t_stack **stack);
+
 
 /* Stack Functions */
 
@@ -117,5 +122,11 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strjoin(char *s1, char *s2);
 void		*ft_calloc(size_t count, size_t size);
 char		*true_free(char **str);
+
+// Funciones en utils2
+
+int			ft_strcmp(const char *s1, const char *s2);
+
+
 
 #endif

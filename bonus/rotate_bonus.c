@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:44:13 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:26:29 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 01:32:33 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* rotate:
 	El elemento superior de la pila se envía al fondo.
 */
-static void	rotate(t_stack **stack)
+void	rotate(t_stack **stack)
 {
 	t_stack	*tmp;
 	t_stack	*tail;

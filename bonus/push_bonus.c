@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:58 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:13:31 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 01:32:17 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	Empuja el elemento superior de la pila src a la parte 
 	superior de la pila de destino.
 */
-static void	push(t_stack **src, t_stack **dest)
+void	push(t_stack **src, t_stack **dest)
 {
 	t_stack	*tmp;
 

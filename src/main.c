@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:43:30 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 23:53:16 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 03:13:00 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,19 @@ static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 		sort(stack_a, stack_b);
 }
 
+/*
+- Dejo esta función para poder comprobar el correcto orden del stack_a
 static void print_stack(t_stack *stack)
 {
     while (stack)
     {
         printf("%d ", stack->value); // Imprime el valor del elemento
-        stack = stack->next; // Avanza al siguiente nodo del stack
+        stack = stack->next;    // Avanza al siguiente nodo del stack
     }
-    printf("\n"); // Imprime una nueva línea al final para una mejor legibilidad
+    printf("\n"); 
 }
 
-/* main:
+	main:
 	Comprueba si la entrada es correcta, en cuyo caso 
 	inicializa las pilas a y b,	asigna cada índice de valor y 
 	ordena las pilas. Cuando se realiza la clasificación, libera
@@ -72,7 +74,7 @@ int	main(int ac, char **av)
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);
-	print_stack(stack_a);
+//	print_stack(stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

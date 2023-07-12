@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 19:44:47 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/11 18:14:05 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 01:31:52 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	Intercambia los 2 elementos superiores de una pila.
 	No hace nada si solo hay uno o ningún elemento.
 */
-static void	swap(t_stack *stack)
+void	swap(t_stack *stack)
 {
 	int	tmp;
 
