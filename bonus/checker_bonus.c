@@ -6,21 +6,10 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 19:09:48 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/12 02:59:02 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/12 03:20:53 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap_bonus.h"
-
-/* Archivo pdte de terminar solo uso de ejemplo para adaptar la idea al proyecto 
-	get next line al standar ouput (0)
-	comparas las lineas con ra rb rra....
-	elecutas las operaciones
-	cuando get next line da 0 checkeas el orden 
-	-si esta bien ok 
-	-si esta mal ko 
-
-*/
 #include "../includes/push_swap_bonus.h"
 
 int is_sorted(t_stack *stack)
@@ -155,3 +144,14 @@ int main(int ac, char **av)
     free_stack(&stack_b);
     return (0);
 }
+
+
+/* Archivo pdte de terminar solo uso de ejemplo para adaptar la idea al proyecto 
+	get next line al standar ouput (0)
+	comparas las lineas con ra rb rra....
+	elecutas las operaciones
+	cuando get next line da 0 checkeas el orden 
+	-si esta bien ok 
+	-si esta mal ko 
+
+*/
