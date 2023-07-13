@@ -6,7 +6,7 @@
 /*   By: csitja-b <csitja-b@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 19:09:48 by csitja-b          #+#    #+#             */
-/*   Updated: 2023/07/12 04:44:40 by csitja-b         ###   ########.fr       */
+/*   Updated: 2023/07/14 01:16:10 by csitja-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,59 +35,62 @@ int ft_strcmp(const char *s1, const char *s2)
 
 int do_commands(char *line, t_stack **stack_a, t_stack **stack_b)
 {
-    if (!(ft_strcmp(line, "sa")))
+    if (!line || !stack_a || !stack_b)
+        return (1);
+
+    if (!(ft_strcmp(line, "sa")) && *stack_a)
     {
         swap(*stack_a);
         return (0);
     }
-    if (!(ft_strcmp(line, "sb")))
+    if (!(ft_strcmp(line, "sb")) && *stack_b)
     {
         swap(*stack_b);
         return (0);
     }
-    if (!(ft_strcmp(line, "ss")))
+    if (!(ft_strcmp(line, "ss")) && *stack_a && *stack_b)
     {
         swap(*stack_a);
         swap(*stack_b);
         return (0);
     }
-    if (!(ft_strcmp(line, "pa")))
+    if (!(ft_strcmp(line, "pa")) && *stack_b)
     {
         push(stack_b, stack_a);
         return (0);
     }
-    if (!(ft_strcmp(line, "pb")))
+    if (!(ft_strcmp(line, "pb")) && *stack_a)
     {
         push(stack_a, stack_b);
         return (0);
     }
-    if (!(ft_strcmp(line, "ra")))
+    if (!(ft_strcmp(line, "ra")) && *stack_a)
     {
         rotate(stack_a);
         return (0);
     }
-    if (!(ft_strcmp(line, "rb")))
+    if (!(ft_strcmp(line, "rb")) && *stack_b)
     {
         rotate(stack_b);
         return (0);
     }
-    if (!(ft_strcmp(line, "rr")))
+    if (!(ft_strcmp(line, "rr")) && *stack_a && *stack_b)
     {
         rotate(stack_a);
         rotate(stack_b);
         return (0);
     }
-    if (!(ft_strcmp(line, "rra")))
+    if (!(ft_strcmp(line, "rra")) && *stack_a)
     {
         rev_rotate(stack_a);
         return (0);
     }
-    if (!(ft_strcmp(line, "rrb")))
+    if (!(ft_strcmp(line, "rrb")) && *stack_b)
     {
         rev_rotate(stack_b);
         return (0);
     }
-    if (!(ft_strcmp(line, "rrr")))
+    if (!(ft_strcmp(line, "rrr")) && *stack_a && *stack_b)
     {
         rev_rotate(stack_a);
         rev_rotate(stack_b);
@@ -96,8 +99,23 @@ int do_commands(char *line, t_stack **stack_a, t_stack **stack_b)
     return (1);
 }
 
+// función comentada, solo para ver el estado del stack
+void print_stack(t_stack *stack)
+{
+    while (stack != NULL)
+    {
+        printf("%d ", stack->value);
+        stack = stack->next;
+    }
+    printf("\n");
+}
+
 void print_checker_res(t_stack *stack_a, t_stack *stack_b)
 {
+    printf("Estado de stack A: ");
+    print_stack(stack_a); // Imprime el contenido del stack A
+    printf("Estado de stack B: ");
+    print_stack(stack_b); // Imprime el contenido del stack B
     if (is_sorted(stack_a) && stack_b == NULL)
         write(1, "OK\n", 3);
     else
@@ -117,39 +135,48 @@ int main(int ac, char **av)
     stack_b = NULL;
     stack_a = fill_stack_values(ac, av);
     stack_size = get_stack_size(stack_a);
-    assign_index(stack_a, stack_size + 1);
+    assign_index(stack_a, stack_size + 1);        
+    char line[100]; // Tamaño suficiente para la línea de instrucción
+    char *buffer = NULL;
+    int pos = 0;
+    char *newline;
 
-    char *line;
-    while ((line = get_next_line(0)))
+    while (1)
     {
-        if (*line == '\0')
+        printf("Estado 1 ");
+        if ((newline = ft_strchr(line, '\n')) != NULL)
         {
-            free(line);
-            break;
+            *newline = '\0';
+            buffer = ft_addbuffer(buffer, line);
+            pos = 0;
+            continue;
         }
-        if (do_commands(line, &stack_a, &stack_b))
+
+        line[pos++] = getchar();
+        if (line[pos - 1] == EOF || line[pos - 1] == '\n')
+            break;
+    }
+
+    char *instruction = ft_returnline(buffer);
+    while (instruction != NULL)
+    {
+        if (do_commands(instruction, &stack_a, &stack_b))
         {
-            write(2, "Error\n", 6);
-            free(line);
+            printf("Estado 2 ");
+            write(2, "Errorsss\n", 6);
+            free(buffer);
             free_stack(&stack_a);
             free_stack(&stack_b);
             return (-1);
         }
-        free(line);
+        printf("Estado 3");
+        free(instruction);
+        instruction = ft_returnline(buffer);
     }
+    printf("Estado 4 ");
     print_checker_res(stack_a, stack_b);
+    free(buffer);
     free_stack(&stack_a);
     free_stack(&stack_b);
     return (0);
 }
-
-
-/* Archivo pdte de terminar solo uso de ejemplo para adaptar la idea al proyecto 
-	get next line al standar ouput (0)
-	comparas las lineas con ra rb rra....
-	elecutas las operaciones
-	cuando get next line da 0 checkeas el orden 
-	-si esta bien ok 
-	-si esta mal ko 
-
-*/
