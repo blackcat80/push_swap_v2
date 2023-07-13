@@ -1,0 +1,317 @@
+#include "../includes/push_swap_bonus.h"
+
+char	*ft_cutline(char *bufferp)
+{
+	char	*cut_buffer;
+	int		i;
+	int		j;
+
+	i = 0;
+	if (!bufferp[i])
+		return (NULL);
+	while (bufferp[i] && bufferp[i] != '\n')
+		i++;
+	if (!bufferp[i])
+		return (true_free(&bufferp));
+	cut_buffer = ft_calloc ((ft_strlen(bufferp) - i + 1), sizeof(char));
+	if (!cut_buffer)
+		return (true_free(&bufferp));
+	i++;
+	j = 0;
+	while (bufferp[i])
+		cut_buffer[j++] = bufferp[i++];
+	true_free(&bufferp);
+	cut_buffer[j] = '\0';
+	return (cut_buffer);
+}
+
+char	*ft_returnline(char *bufferp)
+{
+	char	*line;
+	int		i;
+
+	i = 0;
+	if (!bufferp[i])
+		return (NULL);
+	while (bufferp[i] && bufferp[i] != '\n')
+		i++;
+	if (bufferp[i])
+		line = ft_calloc(i + 2, sizeof(char));
+	else
+		line = ft_calloc(i + 1, sizeof(char));
+	if (!line)
+		return (NULL);
+	i = 0;
+	while (bufferp[i] && bufferp[i] != '\n')
+	{
+		line[i] = bufferp[i];
+		i++;
+	}
+	if (bufferp[i] && bufferp[i] == '\n')
+	{
+		line[i] = '\n';
+	}
+	return (line);
+}
+
+char	*ft_addbuffer(char *bufferp, char *buffer)
+{
+	char	*temp;
+
+	if (!bufferp)
+	{
+		bufferp = malloc(sizeof(char) * 1);
+		if (!bufferp)
+			return (NULL);
+		bufferp[0] = '\0';
+	}
+	temp = ft_strjoin(bufferp, buffer);
+	true_free(&bufferp);
+	return (temp);
+}
+
+char	*ft_read(int fd, char *bufferp)
+{
+	char	buffer[BUFFER_SIZE + 1];
+	int		rbyte;
+
+	buffer[0] = '\0';
+	rbyte = 25;
+	while (rbyte > 0 && !ft_strchr(buffer, '\n'))
+	{
+		rbyte = read(fd, buffer, BUFFER_SIZE);
+		if (rbyte > 0)
+		{
+			buffer[rbyte] = '\0';
+			bufferp = ft_addbuffer(bufferp, buffer);
+		}
+	}
+	if (rbyte == -1)
+	{
+		return (true_free(&bufferp));
+	}
+	return (bufferp);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*buffer = NULL;
+	char		*line;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	buffer = ft_read(fd, buffer);
+	if (!buffer)
+		return (NULL);
+	line = ft_returnline(buffer);
+	if (line == NULL)
+		return (true_free(&buffer));
+	buffer = ft_cutline(buffer);
+	return (line);
+}
+
+int is_sorted(t_stack *stack)
+{
+    while (stack->next != NULL)
+    {
+        if (stack->value > stack->next->value)
+            return (0);
+        stack = stack->next;
+    }
+    return (1);
+}
+
+int ft_strcmp(const char *s1, const char *s2)
+{
+    while (*s1 && *s1 == *s2)
+    {
+        s1++;
+        s2++;
+    }
+    return ((unsigned char)*s1 - (unsigned char)*s2);
+}
+
+int do_commands(char *line, t_stack **stack_a, t_stack **stack_b)
+{
+    if (!(ft_strcmp(line, "sa")))
+    {
+        swap(*stack_a);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "sb")))
+    {
+        swap(*stack_b);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "ss")))
+    {
+        swap(*stack_a);
+        swap(*stack_b);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "pa")))
+    {
+        push(stack_b, stack_a);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "pb")))
+    {
+        push(stack_a, stack_b);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "ra")))
+    {
+        rotate(stack_a);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "rb")))
+    {
+        rotate(stack_b);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "rr")))
+    {
+        rotate(stack_a);
+        rotate(stack_b);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "rra")))
+    {
+        rev_rotate(stack_a);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "rrb")))
+    {
+        rev_rotate(stack_b);
+        return (0);
+    }
+    if (!(ft_strcmp(line, "rrr")))
+    {
+        rev_rotate(stack_a);
+        rev_rotate(stack_b);
+        return (0);
+    }
+    return (1);
+}
+
+void print_checker_res(t_stack *stack_a, t_stack *stack_b)
+{
+    if (is_sorted(stack_a) && stack_b == NULL)
+        write(1, "OK\n", 3);
+    else
+        write(1, "KO\n", 3);
+}
+
+char	*true_free(char **str)
+{
+	free(*str);
+	*str = NULL;
+	return (NULL);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		++i;
+	return (i);
+}
+
+char	*ft_strchr(const char *s, int c)
+{	
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[i]);
+	return (NULL);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char			*new_s;
+	unsigned int	i;
+	unsigned int	j;
+
+	new_s = malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char) + 1);
+	if (!new_s)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		new_s[i] = (char)s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j])
+	{
+		new_s[i + j] = (char)s2[j];
+		j++;
+	}
+	new_s[i + j] = '\0';
+	return (new_s);
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	char			*ptr;
+	unsigned int 	i;
+
+	i = 0;
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	while (i < count * size)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
+	return (ptr);
+}
+
+int main(int ac, char **av)
+{
+    t_stack *stack_a;
+    t_stack *stack_b;
+    int stack_size;
+
+    if (ac < 2)
+        return (0);
+    if (!is_correct_input(av, ac))
+        exit_error(NULL, NULL);
+    stack_b = NULL;
+    stack_a = fill_stack_values(ac, av);
+    stack_size = get_stack_size(stack_a);
+    assign_index(stack_a, stack_size + 1);
+
+    char *line;
+    while ((line = get_next_line(0)))
+    {
+        if (*line == '\0')
+        {
+            free(line);
+            break;
+        }
+        if (do_commands(line, &stack_a, &stack_b))
+        {
+            write(2, "Error\n", 6);
+            free(line);
+            free_stack(&stack_a);
+            free_stack(&stack_b);
+            return (-1);
+        }
+        free(line);
+    }
+    print_checker_res(stack_a, stack_b);
+    free_stack(&stack_a);
+    free_stack(&stack_b);
+    return (0);
+}
